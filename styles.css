@@ -1,7 +1,35 @@
 .content {
-    background-color: #b3b3b3
+    background-image: url("https://images.unsplash.com/photo-1490814525860-594e82bfd34a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbm8lMjBkZSUyMGZ1bmRvJTIwbHVhfGVufDB8fDB8fHww");
+    background-size: cover;
+    align-items: top;
 }
 
 img {
     width: 300px
 }
+
+.main {
+    color: white;
+}
+.Projetos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.Menu ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    font-size: larger;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+
