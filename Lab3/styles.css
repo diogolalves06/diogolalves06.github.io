@@ -15,3 +15,9 @@ nav a {
     border-radius: 5px;
     box-shadow: 2px 3px 3px black;
 }
+
+.Home {
+    padding: 20px;
+    background-color: black;
+    
+}
