@@ -1,16 +1,19 @@
-.content {
-    background-image: url("https://images.unsplash.com/photo-1490814525860-594e82bfd34a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhbm8lMjBkZSUyMGZ1bmRvJTIwbHVhfGVufDB8fDB8fHww");
-    background-size: cover;
-    align-items: top;
+* {
+  padding: 0;
+  margin: 0;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 
 img {
     width: 300px
 }
 
-.main {
-    color: white;
-}
 .Projetos {
     display: flex;
     justify-content: space-between;
@@ -25,11 +28,98 @@ img {
     padding: 0;
     gap: 20px;
     font-size: larger;
-    color: white;
-    position: absolute;
     top: 10px;
     right: 10px;
 
 }
+
+header {
+    position: fixed;      /* mantém o header fixo */
+    top: 0;               /* no topo da página */
+    width: 100%;          /* ocupa toda a largura */
+    background: lightblue;     /* cor de fundo */
+    padding: 20px;
+}
+
+
+/* Hero */
+.Hero_Page {
+    background-size: cover;
+    align-items: center;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    background: #d4f0d4;   /* cor de fundo */
+    height: 800px;           /* altura visível */
+    img{
+        width: 100%;
+    }
+}
+
+/* Labs */
+.Labs {
+    background: #f0e6d4;
+    height: 800px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+.Labs .labs-img {
+    max-width: 300px;         /* largura máxima da imagem */
+    width: 100%;              /* adapta a telas menores */
+    height: auto;  
+}
+
+.Labs ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 330px;
+    justify-content: center;
+}
+
+.Labs ul li {
+    padding: 20px 60px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    box-shadow: 2px 3px 3px black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+}
+
+.DIW {
+    background: #d4e0f0;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px; /* espaço nas laterais */
+}
+
+
+
+.DIW .diw-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* empurra a imagem para a direita */
+}
+
+.DIW .diw-imagem img {
+    max-width: 400px; /* tamanho máximo */
+    width: 100%;
+    height: auto;
+}
+
+
+
+
 
 

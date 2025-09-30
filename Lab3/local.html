@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
+    <head class="head-local">
+        <link rel="stylesheet" href="styles.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Roma</title>
          <style>
             body {
@@ -9,7 +11,7 @@
             }
         </style>
     </head>
-    <body>
+    <body class="body-local">
         <header>
             <h1>Roma</h1>
             <nav>
@@ -22,15 +24,19 @@
 
         <main>
             <h2>Localização</h2>
-            <div>
-                <p style="margin-bottom: -10px;">Roma, capital da Itália, fica na região do Lácio, no centro do país, e está situada às margens do rio Tibre, a cerca de 25 km do mar Tirreno.</p> 
-                <p style="margin-bottom: -10px;">Com cerca de 2,8 milhões de habitantes, é a maior cidade italiana em população e em área, estendendo-se por 1.285 km².</p> 
+            <div class="localizacao">
+                <div class="localizacao-tex"">
+                <p>Roma, capital da Itália, fica na região do Lácio, no centro do país, e está situada às margens do rio Tibre, a cerca de 25 km do mar Tirreno.</p> 
+                <p>Com cerca de 2,8 milhões de habitantes, é a maior cidade italiana em população e em área, estendendo-se por 1.285 km².</p> 
                 <p>Seu relevo é marcado pelas sete colinas históricas e seu clima é mediterrânico, com verões quentes e secos e invernos amenos e chuvosos.</p>
+                </div>
+                <div class="localizacao-map" style="display: flex;flex-direction: row;"> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113800.23595059924!2d12.441495874661367!3d41.897415755729945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2zUm9tYSwgSXTDoWxpYQ!5e0!3m2!1spt-PT!2spt!4v1758612967482!5m2!1spt-PT!2spt"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113800.23595059924!2d12.441495874661367!3d41.897415755729945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2zUm9tYSwgSXTDoWxpYQ!5e0!3m2!1spt-PT!2spt!4v1758612967482!5m2!1spt-PT!2spt"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </main>
-        <footer>
+        <footer class="foot-local">
             <p>DIW 2025</p>
         </footer>
     </body>

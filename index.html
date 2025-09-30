@@ -5,62 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeira Página</title>
     <link rel="stylesheet" href="styles.css" />
-    
 </head>
-<body class="content">
+<body>
     <header>
-        <p>Menu</p>
         <section class="Menu">
             <nav>
                 <ul>
-                    <li><a href="#"></a>Sobre</li>
-                    <li><a href="#"></a>Trabalhos</li>
-                    <li><a href="#"></a>Cadeira</li>
+                    <li><a style="color: black;" href="#hero">Sobre</a></li>
+                    <li><a style="color: black;" href="#labs">Trabalhos</a></li>
+                    <li><a style="color: black;" href="#diw">Cadeira</a></li>
                 </ul>
             </nav>
         </section>
-    <header>
+    </header>
 
     <main class="main"> 
-        <section class="Hero_Page">
-            <p>Eis a minha primeira pagina Web!</p>
+        
+        <!-- HERO PAGE -->
+        <section id="hero" class="Hero_Page">
+
+            <div class="hero_text" style="list-style: none;">
+                <h2>Bem-vindo ao meu primeiro site!</h2>
+                <p>Este é o meu espaço na disciplina <strong>Desenvolvimento de Interfaces Web</strong>, onde estou a explorar HTML, CSS, JavaScript e muito mais! 🚀</p>
+                <p>Aqui vais encontrar um pouco do que estou a aprender, de forma criativa e divertida. Vamos descobrir juntos este mundo das interfaces web! 🌐</p>
+                <p>Iremos criar soluções criativas!</p>
+            </div>
+            <div class="hero_image">
+                <img src="images/silhueta.png" alt="silhueta">
+            </div>
         </section>
         
-        <section class="Disciplina">
-            <p>
-            Na minha unidade Curricular de 
-            <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank">
-                Desenvolvimento de Interfaces Web
-            </a>
-            abordaremos as seguintes tencnologias Web &#127760;:
-        </p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React e Next,js </li>
-        </ul>
-        
-        <p>Iremos criar soluções criativas!</p>
-        </section>
-        <section>
+        <!-- LABS -->
+        <section id="labs" class="Labs">
+            <h2 style="padding: 50px; display: flex; justify-content: flex-end;">Projetos / Laboratórios</h2>
+            <p>Neste laboratório iniciei-me no desenvolvimento de páginas web, explorando as tecnologias básicas de HTML e CSS. Aprendi a estruturar conteúdos de forma semântica e a aplicar estilos para criar layouts simples e funcionais.</p>
+            <p>Também comecei a experimentar o CSS Grid, permitindo organizar os elementos de forma responsiva e eficiente. Este Lab foi essencial para compreender os fundamentos do desenvolvimento web e preparar-me para projetos mais avançados.</p>
             <nav>
                 <ul>
-                    <li><a href=""></a></li>
-                    <li><a href="Lab1/index.html">Lab1</a></li>
-                    <li><a href="Lab2/index.html">Lab2</a></li>
-                    <li><a href="Lab3/index.html">Lab3</a></li>
+                    <li><p>Estrutura base e semântica</p><a href="Lab1/index.html">Lab1</a></li>
+                    <li><p>Estilos e layout responsivo</p><a href="Lab2/index.html">Lab2</a></li>
+                    <li><p>Hero Page e Grid</p><a href="Lab3/index.html">Lab3</a></li>
                 </ul>
             </nav> 
         </section>
 
-        <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+        <!-- DIW -->
+        <section id="diw" class="DIW">
+            <div class="diw-texto">
+                 <h2>Desenvolvimento de Interfaces Web</h2>
+                <p>
+                Na minha unidade Curricular de 
+                <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank">
+                    Desenvolvimento de Interfaces Web
+                </a>
+                abordaremos as seguintes tecnologias Web 🌐:
+                </p>
+            </div>
+            <div class="diw-imagem">
+                <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+            </div>
+        </section>
     </main>
     
     <footer>
         <p>Universidade Lusófona © 2025</p>
     </footer>
-
-    
 </body>
 </html>

@@ -21,3 +21,41 @@ nav a {
     background-color: black;
     
 }
+
+img {
+    width: 40%;
+}
+
+body {
+    background-color: beige;
+}
+
+.localizacao {
+    display: flex;
+    flex-direction: row;       /* lado a lado (desktop) */
+    gap: 24px;
+    align-items: flex-start;   /* alinha topo dos conteúdos */
+    justify-content: center;   /* centra o conjunto na largura do pai */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.imagem {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+
+@media(max-width:600px) {
+    body {
+        .localizacao {
+            display: grid;
+            flex-direction: column;
+        }
+
+        .localizacao-tex {
+            text-align: center;
+        }
+    }
+}
