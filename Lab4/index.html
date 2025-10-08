@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h1>Meu primeiro site com JavaScript</h1>
+</head>
+<body>
+
+  <header>
+    <h1>Bem-vindo à minha página interativa!</h1>
+  </header>
+
+  <main>
+    <p>Explora os botões. Cada interação conta!</p>
+
+    <div>
+      <button onclick="incrementar()">Clique aqui</button>
+      <button ondblclick="incrementar()">Duplo clique</button>
+      <button onmouseover="incrementar()">Passa o rato por cima</button>
+      <button onmouseout="incrementar()">Tira o rato de cima</button>
+      <button onmousemove="incrementar()">Move o rato aqui</button>
+    </div>
+
+    <p id="contador">Contador: 0</p>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZULgn7jR5IH6sCNm5PjEnH1xTaSLFJLmx8w&s" alt="silhueta">
+  </main>
+  <footer>
+    <p>2025</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  
+</body>
+</html>
