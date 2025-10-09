@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section id="Passa">
+            <p>1. Passa por ai!</p>
+            <script>
+
+                const frase = document.querySelector("#idPassa p")
+
+                
+                function mudarFrase() {
+                    frase.textContent = "Obrigado por passares!"
+                }
+
+                function reporFrase() {
+                    frase.textContent = "1. Passa por ai!"
+                }
+
+                frase.onmousehover = mudarFrase()
+                frase.onmouseout = reporFrase()
+                
+            </script>
+        </section>
+    </main>
+</body>
+</html>
