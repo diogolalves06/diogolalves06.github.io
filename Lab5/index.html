@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: rgb(59, 0, 0);
+            
+        }
+
+        section {
+            width: 320px;
+            background : rgb(253, 226, 226);
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-content: center;
+            gap: 5px;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -11,20 +38,92 @@
             <p>1. Passa por ai!</p>
             <script>
 
-                const frase = document.querySelector("#idPassa p")
+                const frase = document.querySelector("#Passa p");
 
                 
-                function mudarFrase() {
-                    frase.textContent = "Obrigado por passares!"
+                mudarFrase = (modo) => {
+                    if (modo) {
+                        frase.textContent = "Obrigado por passares!";
+                    } else {
+                        frase.textContent = "1. Passa por ai!";
+                    }
+                    
                 }
 
-                function reporFrase() {
-                    frase.textContent = "1. Passa por ai!"
-                }
-
-                frase.onmousehover = mudarFrase()
-                frase.onmouseout = reporFrase()
+                frase.onmouseover = () => (mudarFrase(true));
+                frase.onmouseout = () => (mudarFrase(false));
                 
+            </script>
+        </section>
+
+        <section id="Pinta-me">
+
+            <p>2. Pinta-me</p>
+
+            <button>Red</button>
+            <button>Green</button>
+            <button>Blue</button>
+
+            <script>
+                
+                const botãoRed = document.querySelector("#Pinta-me button:nth-child(2)")
+                const botãoGreen = document.querySelector("#Pinta-me button:nth-child(3)")
+                const botãoBlue = document.querySelector("#Pinta-me button:nth-child(4)")
+                const texto = document.querySelector("#Pinta-me p")
+                
+
+                function mudarCor (cor) {
+                        texto.style.color = cor
+                }
+
+
+                botãoRed.onclick = () => mudarCor("red");
+                botãoGreen.onclick = () => mudarCor("green");
+                botãoBlue.onclick = () => mudarCor("blue");
+
+            </script>
+
+
+        </section>
+
+
+        <section id="Escreve">
+            
+            <label for="input">3. Experimenta escrever</label>
+            <input type = "text">
+            
+            <script>
+
+                const textoCaixa = document.querySelector("#Escreve input");
+
+
+                const arco = ["red", "green", "blue"]
+                let i = 0
+                function cores () {
+                    textoCaixa.style.backgroundColor = arco[i];
+                    i++;
+                    if (i > 3) i = 0;
+                }
+
+                textoCaixa.onkeyup = cores;
+
+
+            </script>
+
+        </section>
+
+        <section id="# ingles">
+
+            <label for="input">4. Escreve cor em ingles</label>
+            <input type = "text">
+
+            <script>
+
+                const caixaTexto = document.querySelector("#ingles")
+
+                function alterarCor() {
+                    
+                }
             </script>
         </section>
     </main>

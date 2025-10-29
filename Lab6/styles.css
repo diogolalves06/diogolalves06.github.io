@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: coral; 
+    z-index: 1000;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+}
+
+.menu li {
+    display: flex;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav a:hover {
+    background-color: none;
+    color: inherit;
+}
+
+.menu li:hover {
+    background-color: black; 
+    transition: 0.3s;
+}
+
+.menu li:hover a {
+    color: white;
+}
+
+body {
+    background-color: #E0E0E0;
+}
+
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;           
+    gap: 15px;                
+    justify-content: center;  
+    padding: 40px 0;   
+}
+
