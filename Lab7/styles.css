@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: coral; 
+    z-index: 1000;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black; /* Perduntar ao stor */
+
+}
+
+h1 {
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+}
+
+.menu li {
+    display: flex;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav a:hover {
+    background-color: none;
+    color: inherit;
+}
+
+.menu li:hover {
+    background-color: black; 
+    transition: 0.3s;
+}
+
+.menu li:hover a {
+    color: white;
+}
+
+body {
+    background-color: #E0E0E0;
+}
+
+
+main h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;           
+    gap: 15px;                
+    justify-content: center;  
+    padding: 40px 0;   
+}
+
+#produtos article {
+    width: 220px;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: coral;
+    text-align: center;
+    color: whitesmoke;
+    border: 2px solid black;
+}
+
+#produtos article h3 {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding-bottom: 10px;
+}
+
+#produtos article img {
+    width: 100%;
+    height: auto;
+    border-radius: 600px;
+    margin-bottom: 10px;
+}
+
+#produtos article p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 6px;
+    color: whitesmoke;
+}
+
+
+#cesto {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: coral;
+    gap: 30px;
+    min-height: 400px;
+    position: relative; /* Necessário para posicionar o total dentro */
+    padding-bottom: 60px; /* Dá espaço ao total */
+}
+
+#cesto h2 {
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+
+#cesto article {
+    margin: 70px 0px;
+    border-radius: 10px;
+    padding: 15px;
+    height: 380px;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid black; /* Perduntar ao stor */
+}
+
+
+#cesto p:last-child {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
