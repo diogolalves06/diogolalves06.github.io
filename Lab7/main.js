@@ -106,10 +106,7 @@ function exibirCarrinho() {
         secaoCarrinho.append(item);
     });
 
-    const total = carrinho.reduce((soma, p) => soma + Number(p.price || 0), 0);
-    const totalEl = document.createElement("p");
-    totalEl.textContent = `Total: €${total.toFixed(2)}`;
-    secaoCarrinho.append(totalEl);
+    mostrarCaixaCompraNoFinal(carrinho)
 }
 
 function removerDoCarrinho(indice) {
@@ -180,5 +177,87 @@ document.addEventListener("change", (e) => {
 document.addEventListener("input", (e) => {
     if (e.target?.id === "busca") atualizarListaProdutos();
 });
+
+function mostrarCaixaCompraNoFinal(carrinho) {
+    const secaoCesto = document.querySelector("#cesto") || document.body;
+
+    const antiga = document.querySelector("#caixa-compra");
+    if (antiga) antiga.remove();
+
+    if (!Array.isArray(carrinho) || carrinho.length === 0) return;
+
+    const total = carrinho.reduce((soma, p) => soma + Number(p.price || 0), 0);
+
+    const caixa = document.createElement("section");
+    caixa.id = "caixa-compra";
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = `Total: €${total.toFixed(2)}`;
+    caixa.appendChild(titulo);
+
+    const labelEstudante = document.createElement("label");
+    const checkEstudante = document.createElement("input");
+    checkEstudante.type = "checkbox";
+    labelEstudante.appendChild(checkEstudante);
+    labelEstudante.appendChild(document.createTextNode(" És estudante do DEISI?"));
+    caixa.appendChild(labelEstudante);
+
+    // --- CUPÃO + BOTÃO NA MESMA LINHA ---
+    const labelCupao = document.createElement("label");
+    labelCupao.setAttribute("for", "cupao");
+    labelCupao.textContent = "Cupão: ";
+
+    const inputCupao = document.createElement("input");
+    inputCupao.id = "cupao";
+    inputCupao.placeholder = "Insere o código";
+
+    const botao = document.createElement("button");
+    botao.textContent = "Comprar";
+
+    // botão fica dentro do label -> alinha ao lado sem div
+    labelCupao.appendChild(inputCupao);
+    labelCupao.appendChild(botao);
+    caixa.appendChild(labelCupao);
+
+    // mensagem
+    const msg = document.createElement("p");
+    caixa.appendChild(msg);
+
+    botao.addEventListener("click", async () => {
+        const products = carrinho.map(p => p.id);
+        const student = checkEstudante.checked;
+        const coupon = inputCupao.value;
+        const dados = { products, student, coupon };
+
+        const url = "https://deisishop.pythonanywhere.com/buy/";
+
+        try {
+            const resposta = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(dados)
+            });
+
+            if (!resposta.ok) {
+                let mensagem = `Erro ${resposta.status}`;
+                try {
+                    const errJson = await resposta.json();
+                    if (errJson.message) mensagem = errJson.message;
+                } catch {}
+                throw new Error(mensagem);
+            }
+
+            const data = await resposta.json();
+            msg.textContent = `Valor final a pagar: ${data.totalCost}€ | Referência: ${data.reference}`;
+        } catch (err) {
+            msg.textContent = `Erro ao efetuar compra: ${err.message}`;
+        }
+    });
+
+    secaoCesto.appendChild(caixa);
+}
+
+
+
 
 

@@ -75,7 +75,8 @@ main h2 {
     flex-wrap: wrap;           
     gap: 15px;                
     justify-content: center;  
-    padding: 40px 0;   
+    padding: 40px 0;
+       
 }
 
 #produtos article {
@@ -150,4 +151,29 @@ main h2 {
     padding: 10px 20px;
     font-weight: bold;
 }
+
+.butoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: coral;
+  border-radius: 10px;
+  
+}
+
+#caixa-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* tudo alinhado à direita */
+    gap: 8px; /* espaçamento entre elementos */
+    margin-top: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
 

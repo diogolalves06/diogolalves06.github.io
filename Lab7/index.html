@@ -18,39 +18,41 @@
     </header>
 
     <main>
-        <h2>Selecione os seus Produtos</h2>
-        <section>
-            <ul class="butoes">
-                <li>
-                    <label for="categoria">Filtrar</label>
-                    <select id="categoria" name="categoria">
-                        <option value="">Todas as categorias</option>
-                        <option value="t-shirts">T-shirts</option>
-                        <option value="canecas">Canecas</option>
-                        <option value="meias">Meias</option>
-                    </select>
-                </li>
+        <section class="filtros-container">
+            <h2>Selecione os seus Produtos</h2>
+            <section>
+                <ul class="butoes">
+                    <li>
+                        <label for="categoria">Filtrar</label>
+                        <select id="categoria" name="categoria">
+                            <option value="">Todas as categorias</option>
+                            <option value="t-shirts">T-shirts</option>
+                            <option value="canecas">Canecas</option>
+                            <option value="meias">Meias</option>
+                        </select>
+                    </li>
 
-                <li>
-                    <label for="ordenacao">Ordenar</label>
-                    <select id="ordenacao" name="ordenacao">
-                        <option value="">Ordenar pelo preço</option>
-                        <option value="precoDecrescente">Preço Decrescente</option>
-                        <option value="precoCrescente">Preço Crescente</option>
-                    </select>
-                </li>
+                    <li>
+                        <label for="ordenacao">Ordenar</label>
+                        <select id="ordenacao" name="ordenacao">
+                            <option value="">Ordenar pelo preço</option>
+                            <option value="precoDecrescente">Preço Decrescente</option>
+                            <option value="precoCrescente">Preço Crescente</option>
+                        </select>
+                    </li>
 
-                <li>
-                    <label for="busca">Procurar</label>
-                    <input type="text" id="busca" name="busca" placeholder="Digite o nome do produto" />
-                </li>
-            </ul>
+                    <li>
+                        <label for="busca">Procurar</label>
+                        <input type="text" id="busca" name="busca" placeholder="Digite o nome do produto" />
+                    </li>
+                </ul>
+            </section>
+
+            <section id="produtos"></section>
+
+            <!-- Mantém id="cesto" consistente com o JS -->
+            <section id="cesto"></section>
         </section>
-
-        <section id="produtos"></section>
-
-        <!-- Mantém id="cesto" consistente com o JS -->
-        <section id="cesto"></section>
     </main>
 
     <footer></footer>
