@@ -123,28 +123,70 @@ header {
 }
 
 
+/* Secção DIW */
 .DIW {
     background: #d4e0f0;
-    height: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px; /* espaço nas laterais */
+    padding: 60px 80px;
+    gap: 40px;
+    flex-wrap: wrap; /* permite adaptar automaticamente */
 }
 
+/* Texto */
+.DIW .diw-texto {
+    flex: 1;
+    min-width: 300px;
+}
 
+.DIW .diw-texto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
 
+.DIW .diw-texto p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Imagem (wordcloud) */
 .DIW .diw-imagem {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* empurra a imagem para a direita */
+    justify-content: center;
+    align-items: center;
 }
 
 .DIW .diw-imagem img {
-    max-width: 400px; /* tamanho máximo */
+    max-width: 400px;
     width: 100%;
     height: auto;
+    border-radius: 12px;
 }
+
+/* ====== MEDIA QUERIES ====== */
+
+/* Telemóvel / ecrãs pequenos */
+@media (max-width: 768px) {
+    .DIW {
+        flex-direction: column;       /* muda de linha para coluna */
+        text-align: center;           /* centraliza o texto */
+        padding: 40px 20px;
+    }
+
+    .DIW .diw-texto, 
+    .DIW .diw-imagem {
+        flex: unset;
+        width: 100%;
+    }
+
+    .DIW .diw-imagem img {
+        max-width: 300px;             /* imagem menor */
+        margin-top: 20px;
+    }
+}
+
 
 
 
