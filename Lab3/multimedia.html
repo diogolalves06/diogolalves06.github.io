@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Roma</title>
-        <style>
-            .Fotografias {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .Fotografias img {
-                width: 150px;
-                border-radius: 20px;
-            }
-            body {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Roma</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="local.html">Localização</a>
-                <a href="multimedia.html">Multimédia</a>
-                <a href="info.html">Informação</a>
-            </nav>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Roma</title>
+</head>
 
-        <main>
-            <h2>Multimédia</h2>
-            <p>Nesta página encontram-se conteúdos multimédia.</p>
+<body>
+  <header class="Inicio">
+    <h1>Roma</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+      <a href="info.html">Informação</a>
+    </nav>
+  </header>
 
-            <section>
-                <h3>Fotografias</h3>
-                <div class="Fotografias">
-                    <img src="images/arco.jpg" alt="arco">
-                    <img src="images/centro.jpg" alt="centro">
-                    <img src="images/coliseu.jpg" alt="coliseu">
-                    <img src="images/estatua.jpeg" alt="estatua">
-                    <img src="images/fontecentro.jpg" alt="fontecentro">
-                    <img src="images/vista.jpg" alt="vista">
-                    <img src="images/vista2.jpg" alt="vista2">
-                    <img src="images/vista3.jpeg" alt="vista3">
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>DIW 2025</p>
-        </footer>
-    </body>
+  <main>
+    <section class="multimedia">
+      <h2>Multimédia</h2>
+      <p>Nesta página encontram-se conteúdos multimédia sobre Roma.</p>
+
+      <!-- 📸 Fotografias -->
+      <h3>Fotografias</h3>
+      <div class="Fotografias">
+        <img src="images/arco.jpg" alt="arco">
+        <img src="images/centro.jpg" alt="centro">
+        <img src="images/coliseu.jpg" alt="coliseu">
+        <img src="images/estatua.jpeg" alt="estatua">
+        <img src="images/fontecentro.jpg" alt="fontecentro">
+        <img src="images/vista.jpg" alt="vista">
+        <img src="images/vista2.jpg" alt="vista2">
+        <img src="images/vista3.jpeg" alt="vista3">
+      </div>
+
+      <!-- 🏛️ Post sobre Roma -->
+      <div class="post">
+        <h3>Roma — A Cidade Eterna</h3>
+        <p>
+          Roma, a capital de Itália, é uma das cidades mais antigas e fascinantes do mundo.
+          Fundada há mais de 2.500 anos, foi o coração do Império Romano e continua a ser um
+          dos destinos turísticos mais visitados do planeta.
+        </p>
+        <p>
+          O Coliseu, a Fonte de Trevi, o Panteão e a Praça de São Pedro são apenas alguns dos
+          ícones que contam a sua história milenar. Roma é um museu a céu aberto, onde o
+          passado e o presente convivem harmoniosamente.
+        </p>
+      </div>
+
+      <!-- 🎥 Vídeo -->
+      <div class="video">
+        <h3>Vídeo — Descobre Roma</h3>
+        <iframe 
+          src="https://www.youtube.com/embed/H2P6pN1lYks" 
+          title="Descobre Roma"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>DIW 2025 — Universidade Lusófona</p>
+  </footer>
+</body>
 </html>
