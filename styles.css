@@ -60,40 +60,68 @@ header {
 /* Labs */
 .Labs {
     background: #f0e6d4;
-    height: 800px;
-    padding-left: 10px;
-    padding-right: 10px;
-
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-
-.Labs .labs-img {
-    max-width: 300px;         /* largura máxima da imagem */
-    width: 100%;              /* adapta a telas menores */
-    height: auto;  
+/* Título */
+.Labs h2 {
+    padding-bottom: 40px;
 }
 
+/* Lista dos labs (caixas) */
 .Labs ul {
     display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 330px;
+    flex-wrap: wrap; /* permite ir para a linha de baixo se faltar espaço */
     justify-content: center;
+    gap: 40px; /* espaço entre caixas */
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
 }
 
+/* Cada caixa (lab) */
 .Labs ul li {
-    padding: 20px 60px;
     background-color: white;
-    text-decoration: none;
-    color: black;
-    box-shadow: 2px 3px 3px black;
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
+    border-radius: 12px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 20px;
-    text-align: center;
-
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Efeito hover bonito */
+.Labs ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 6px 10px rgba(0,0,0,0.3);
+}
+
+/* Texto e link dentro das caixas */
+.Labs ul li p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.Labs ul li a {
+    background-color: #f5b700;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.Labs ul li a:hover {
+    background-color: #fcd26b;
+}
+
 
 .DIW {
     background: #d4e0f0;
