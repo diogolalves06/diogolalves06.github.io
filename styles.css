@@ -1,195 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #f9fafb;
+}
+
+/* LINKS */
 a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
 }
 
-
-img {
-    width: 300px
+a:hover {
+  color: #0077b6;
 }
 
-.Projetos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.Menu ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-    font-size: larger;
-    top: 10px;
-    right: 10px;
-
-}
-
+/* HEADER */
 header {
-    position: fixed;      /* mantém o header fixo */
-    top: 0;               /* no topo da página */
-    width: 100%;          /* ocupa toda a largura */
-    background: lightblue;     /* cor de fundo */
-    padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px;
+  padding: 16px 40px;
+  z-index: 1000;
 }
 
+.Menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 30px;
+  font-size: 1.1rem;
+}
 
-/* Hero */
+/* HERO */
 .Hero_Page {
-    background-size: cover;
-    align-items: center;
-    top: 0px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 80px;
-    background: #d4f0d4;   /* cor de fundo */
-    height: 800px;           /* altura visível */
-    img{
-        width: 100%;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edf6f9;
+  min-height: 100vh;
+  padding: 120px 80px 60px;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-/* Labs */
+.hero_text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero_text h2 {
+  font-size: 2.4rem;
+  color: #023047;
+  margin-bottom: 20px;
+}
+
+.hero_text p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.hero_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero_image img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* LABS */
 .Labs {
-    background: #f0e6d4;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background: #fff5e1;
+  padding: 100px 40px;
+  text-align: center;
 }
 
-/* Título */
 .Labs h2 {
-    padding-bottom: 40px;
+  font-size: 2.2rem;
+  color: #023047;
+  margin-bottom: 40px;
 }
 
-/* Lista dos labs (caixas) */
+.Labs p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #555;
+}
+
 .Labs ul {
-    display: flex;
-    flex-wrap: wrap; /* permite ir para a linha de baixo se faltar espaço */
-    justify-content: center;
-    gap: 40px; /* espaço entre caixas */
-    list-style: none;
-    padding: 0;
-    margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  list-style: none;
 }
 
-/* Cada caixa (lab) */
 .Labs ul li {
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Efeito hover bonito */
 .Labs ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 4px 6px 10px rgba(0,0,0,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px;
 }
 
-/* Texto e link dentro das caixas */
 .Labs ul li p {
-    margin-bottom: 10px;
-    font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #023047;
 }
 
 .Labs ul li a {
-    background-color: #f5b700;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
+  background-color: #ffb703;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 8px;
 }
 
 .Labs ul li a:hover {
-    background-color: #fcd26b;
+  background-color: #ffd166;
 }
 
-
-/* Secção DIW */
+/* DIW */
 .DIW {
-    background: #d4e0f0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 80px;
-    gap: 40px;
-    flex-wrap: wrap; /* permite adaptar automaticamente */
+  background: #d4e0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 80px 60px;
+  gap: 40px;
 }
 
-/* Texto */
 .DIW .diw-texto {
-    flex: 1;
-    min-width: 300px;
+  flex: 1;
+  min-width: 300px;
 }
 
 .DIW .diw-texto h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #023047;
+  margin-bottom: 20px;
 }
 
 .DIW .diw-texto p {
-    font-size: 1.1em;
-    line-height: 1.5;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-/* Imagem (wordcloud) */
 .DIW .diw-imagem {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .DIW .diw-imagem img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+  width: 350px;
+  max-width: 100%;
+  border-radius: 12px;
 }
 
-/* ====== MEDIA QUERIES ====== */
 
-/* Telemóvel / ecrãs pequenos */
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #023047;
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-    .DIW {
-        flex-direction: column;       /* muda de linha para coluna */
-        text-align: center;           /* centraliza o texto */
-        padding: 40px 20px;
-    }
+  header {
+    padding: 14px 20px;
+  }
 
-    .DIW .diw-texto, 
-    .DIW .diw-imagem {
-        flex: unset;
-        width: 100%;
-    }
+  .Menu ul {
+    justify-content: center;
+    font-size: 1rem;
+  }
 
-    .DIW .diw-imagem img {
-        max-width: 300px;             /* imagem menor */
-        margin-top: 20px;
-    }
+  .Hero_Page {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 30px 40px;
+  }
+
+  .hero_text h2 {
+    font-size: 1.8rem;
+  }
+
+  .Labs {
+    padding: 80px 20px;
+  }
+
+  .DIW {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
 }
-
-
-
-
-
-
-

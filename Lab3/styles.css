@@ -12,6 +12,7 @@ body {
   background-color: #f9f9f9;
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
+  line-height: 1.6;
 }
 
 /* =============================
@@ -24,7 +25,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   background: #e3c47b;
-  box-shadow: 0 2px 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -83,7 +84,7 @@ h3 {
 section, .post, .localizacao, .Home {
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 3px 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   margin: 40px auto;
   padding: 30px;
   max-width: 1000px;
@@ -125,7 +126,7 @@ section, .post, .localizacao, .Home {
 .imagem img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 2px 3px 6px;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
 }
 
 /* =============================
@@ -151,7 +152,8 @@ section, .post, .localizacao, .Home {
   height: 120px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 2px 3px 6px;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
 .Fotografias img:hover {
@@ -165,7 +167,7 @@ section, .post, .localizacao, .Home {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 3px 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   line-height: 1.6;
 }
 
@@ -188,7 +190,7 @@ section, .post, .localizacao, .Home {
 .informacao {
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 3px 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   padding: 40px;
   margin: 40px auto;
   max-width: 1000px;
@@ -212,7 +214,7 @@ section, .post, .localizacao, .Home {
 .imagens img {
   width: 300px;
   border-radius: 10px;
-  box-shadow: 2px 3px 6px;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
 }
 
 /* Responsivo */
