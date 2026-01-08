@@ -1,66 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Roma</title>
-         <style>
-            body {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Roma</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="local.html">Localização</a>
-                <a href="multimedia.html">Multimédia</a>
-                <a href="info.html">Informação</a>
-            </nav>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roma - Informação</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilo direto para a tabela */
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
 
-        <main>
-            <h2>Informação</h2>
-            <div>
-                <table border="1" style="margin: 0 auto;">
-                <tr>
-                    <th rowspan="2">Demografia</th>
-                    <td>População</td>
-                    <td>000000</td>
-                </tr>
-                <tr>
-                    <td>Densidade Populacional</td>
-                    <td>0000</td>
-                </tr>
-                <tr>
-                    <th rowspan="3">Geografia</th>
-                    <td>Área</td>
-                    <td>000000</td>
-                    <tr>
-                        <td>Região</td>
-                        <td>local</td>
-                        <tr>
-                            <td>Pais</td>
-                            <td>local</td>
-                        </tr>
-                    </tr>
-                </tr>
-                <tr>
-                    <th>Website</th>
-                    <td colspan="2">odaodisaodias</td>
-                </tr>
-            </table>
-            </div>
-            <div class="imagens">
-                <img src="images/imagem.jpg" alt="fundo">
-                <img src="images/imagem2.jpg" alt="fundo1">
-            </div>
-        </main>
-        <footer>
-            <p>DIW 2025</p>
-        </footer>
-    </body>
+      th {
+        background-color: rgb(87, 255, 205);
+        color: rgb(0, 60, 90);
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      td {
+        color: #333;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      /* Curiosidades */
+      .curiosidades {
+        margin-top: 40px;
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .curiosidades h3 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #222;
+      }
+
+      .curiosidades ul {
+        list-style-type: "🌟 ";
+        padding-left: 20px;
+        line-height: 1.8;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="Inicio">
+      <h1>Roma</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="info.html">Informação</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="informacao">
+        <h2>Informação</h2>
+
+        <div class="conteudo-info">
+          <table border="1" style="margin: 0 auto;">
+            <tr>
+              <th rowspan="2">Demografia</th>
+              <td>População</td>
+              <td>2,8 milhões</td>
+            </tr>
+            <tr>
+              <td>Densidade Populacional</td>
+              <td>2.200 hab/km²</td>
+            </tr>
+            <tr>
+              <th rowspan="3">Geografia</th>
+              <td>Área</td>
+              <td>1.285 km²</td>
+            </tr>
+            <tr>
+              <td>Região</td>
+              <td>Lácio</td>
+            </tr>
+            <tr>
+              <td>País</td>
+              <td>Itália</td>
+            </tr>
+            <tr>
+              <th>Website</th>
+              <td colspan="2">
+                <a href="https://www.comune.roma.it" target="_blank">
+                  www.comune.roma.it
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 📜 Lista de curiosidades -->
+        <div class="curiosidades">
+          <h3>5 Curiosidades sobre Roma</h3>
+          <ul>
+            <li>Roma tem mais de 2.000 fontes espalhadas pela cidade.</li>
+            <li>O Coliseu podia receber até 50.000 pessoas durante os jogos romanos.</li>
+            <li>Existe um país inteiro dentro de Roma: o Vaticano.</li>
+            <li>A cidade é mais velha que o próprio Império Romano, fundada em 753 a.C.</li>
+            <li>Há uma lei antiga que proíbe matar gatos de rua — eles são considerados símbolos da cidade.</li>
+          </ul>
+        </div>
+
+        <div class="imagens">
+          <img src="images/imagem.jpg" alt="Vista de Roma" />
+          <img src="images/imagem2.jpg" alt="Centro histórico de Roma" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2025 — Universidade Lusófona</p>
+    </footer>
+  </body>
 </html>
